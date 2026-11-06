@@ -36,9 +36,14 @@
     li+li{margin-top:7px}
     .credentials{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
     .credentials span{background:#eeedff;padding:9px 13px;font-weight:700}
-    .metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:32px}
-    .metric strong{display:block;color:var(--vio);font-size:2.5rem;line-height:1.15}
-    .metric h3{margin-top:12px}
+    .why-heading{max-width:980px}
+    .why-opening{max-width:880px;margin:22px 0 42px;font-size:1.08rem}
+    .why-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 56px}
+    .why-grid article{min-width:0}
+    .why-grid h3{font-size:clamp(1.2rem,2vw,1.5rem);letter-spacing:-.03em}
+    .why-grid p{max-width:510px}
+    .why-path{color:var(--vio);font-weight:700}
+    .why-statement{margin:54px 0 0;padding:32px;background:var(--dark);color:white;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:700;line-height:1.45;letter-spacing:-.03em}
     .programs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:32px}
     .program{background:#fff;padding:26px;border-top:4px solid var(--vio)}
     .program p:last-child{margin-bottom:0}
@@ -59,7 +64,9 @@
       .section{padding:58px 0}
       .profile{grid-template-columns:1fr;gap:28px}
       .portrait{justify-self:start;width:min(70%,250px)}
-      .columns,.metrics,.areas,.method{grid-template-columns:1fr;gap:18px}
+      .columns,.areas,.method{grid-template-columns:1fr;gap:18px}
+      .why-grid{grid-template-columns:1fr;gap:28px}
+      .why-statement{margin-top:40px;padding:24px}
       .programs{grid-template-columns:1fr}
       .subsection{margin-top:48px}
     }
@@ -133,13 +140,34 @@
 
     <section class="section soft">
       <div class="wrap">
-        <h2>교육 후 업무가 달라지는 경험</h2>
-        <p class="intro">실제 업무 시나리오와 프로젝트를 중심으로 참가자가 자신의 결과물을 완성하도록 설계합니다.</p>
-        <div class="metrics">
-          <div class="metric"><strong>31개 팀</strong><h3>현장 확산 경험</h3><p>제약 영업팀을 찾아가 팀별 업무 상황에 맞는 AI 과정을 운영했습니다.</p></div>
-          <div class="metric"><strong>29 / 31개 팀</strong><h3>교육 후 사용 증가</h3><p>기존 소개 자료에 따르면 31개 팀 중 29개 팀에서 교육 후 Copilot 사용량 증가가 확인됐습니다.</p></div>
-          <div class="metric"><strong>5.00 / 5.00</strong><h3>실무형 과정 만족도</h3><p>기존 소개 자료에 제시된 OTC KAM2 AI/DT 과정의 만족도 사례입니다.</p></div>
+        <h2 class="why-heading">AI를 가르치는 강사는 많습니다.<br>조직이 AI로 일하게 만드는 강사는 다릅니다.</h2>
+        <div class="why-opening">
+          <p><strong>강의장에서 “신기하다”로 끝내지 않습니다.</strong></p>
+          <p>교육 다음 날부터 참가자가 자신의 실제 업무를 AI와 함께 수행하고, 반복되는 업무는 자동화하며, 필요한 업무는 Agent에게 맡길 수 있도록 교육을 설계합니다.</p>
         </div>
+        <div class="why-grid">
+          <article>
+            <h3>질문하는 사람에서<br>AI와 함께 일하는 사람으로</h3>
+            <p>단순 Prompt 작성법이나 기능 소개에 머물지 않습니다. 참가자의 실제 메일 · 회의 · 보고서 · 기획 · 데이터 분석 업무를 Microsoft 365 Copilot과 연결해, 교육 후 바로 자신의 업무에서 활용할 수 있도록 만듭니다.</p>
+            <p class="why-path">Prompt → 실제 업무 → 결과물</p>
+          </article>
+          <article>
+            <h3>AI를 써보는 조직에서<br>AI가 일하는 조직으로</h3>
+            <p>개인의 Copilot 활용에서 한 단계 더 나아갑니다. 반복 업무를 Power Automate · VBA · Python · AI Agent와 연결하고, 사람이 해야 하는 일과 AI에게 맡길 일을 구분하도록 설계합니다.</p>
+            <p class="why-path">Copilot → Automation → Agent</p>
+          </article>
+          <article>
+            <h3>예제를 따라 하는 교육에서<br>내 업무 결과물을 만드는 교육으로</h3>
+            <p>정해진 예제를 따라 하고 끝내는 실습보다 참가자의 실제 업무 Scenario와 데이터를 활용합니다. 교육이 끝났을 때 남는 것은 내 Prompt · 내 Agent · 내 Dashboard · 내 업무 프로세스입니다.</p>
+            <p class="why-path">Learning → Building → Working</p>
+          </article>
+          <article>
+            <h3>한 번의 교육에서<br>조직의 AX Transformation으로</h3>
+            <p>영업 현장의 AI 활용부터 마케팅의 Agentic AI, Copilot Studio, Skill 기반 교육까지 실제 직무에 맞춘 AI 교육으로 확장해 왔습니다.</p>
+            <p class="why-path">Individual → Team → Organization</p>
+          </article>
+        </div>
+        <p class="why-statement">제가 만드는 것은 AI 교육이 아니라,<br>교육 다음 날 달라진 업무입니다.</p>
       </div>
     </section>
 
